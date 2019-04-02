@@ -19,7 +19,7 @@ def findTop(f,num_col, mark_col):
     best = best_idx =  0
     for line in f:
         data = line.strip().split(",")
-        #this gives errors in test case but not when the program runs
+        #this gives errors in test case but not when the program runs with error out of range
         mark = int(data[mark_col+1])
         if mark > best:
             best=mark
