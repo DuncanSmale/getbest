@@ -7,6 +7,8 @@ def getCols(f):
     ''' Finds which columns the marks and student number is in '''
     headings = f.readline().strip().split(",")
     i=1
+    num_col = 0
+    mark_col = 0
     for head in headings:
         if head == "Student Number": num_col=i
         elif head == "Mark" : mark_col = i
@@ -20,6 +22,7 @@ def findTop(f,num_col, mark_col):
         mark = int(data[mark_col])
         if mark > best:
             best=mark
+            best_idx=int(data[mark_col-1]) 
     return best_idx, best
 
 
